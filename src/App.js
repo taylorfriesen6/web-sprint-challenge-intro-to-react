@@ -7,6 +7,7 @@ import Character from './components/Character.js';
 const StyledCharacters = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const App = () => {
