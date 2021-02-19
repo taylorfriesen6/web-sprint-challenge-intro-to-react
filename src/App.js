@@ -1,7 +1,13 @@
 import React, {useState, useEffect} from 'react';
+import styled from 'styled-components';
 import axios from 'axios';
 import './App.css';
 import Character from './components/Character.js';
+
+const StyledCharacters = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -28,12 +34,12 @@ const App = () => {
       .catch(err => console.log(err));
   }, []);
 
-  console.log(characters);
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <p>{characters.length}</p>
-      {characters.map(character => <Character character={character}/>)}
+      <StyledCharacters>
+        {characters.map(character => <Character character={character}/>)}
+      </StyledCharacters>
     </div>
   );
 }
