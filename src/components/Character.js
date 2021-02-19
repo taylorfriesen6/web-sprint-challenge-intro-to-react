@@ -9,6 +9,7 @@ const StyledCharacter = styled.div`
     margin: 1em;
     width: 20em;
     border-radius: 1em;
+    opacity: 80%;
 `;
 
 const Character = ({character}) => {

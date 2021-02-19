@@ -29,7 +29,7 @@ const App = () => {
     // }
     // TODO: sort characters!
 
-    axios.get(`https://swapi.dev/api/people`)
+    axios.get(`https://swapi.dev/api/people/`)
       .then(res => setCharacters(res.data.results || res.data))
       .catch(err => console.log(err));
   }, []);
