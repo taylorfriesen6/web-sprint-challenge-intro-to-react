@@ -35,12 +35,11 @@ const App = () => {
       .catch(err => console.log(err));
   }, []);
 
-  console.log(characters);
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
       <StyledCharacters>
-        {characters.map(character => <Character character={character}/>)}
+        {characters.map((character, i) => <Character character={character} key={i}/>)}
       </StyledCharacters>
     </div>
   );
