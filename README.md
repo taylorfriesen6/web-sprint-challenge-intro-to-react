@@ -32,11 +32,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React is a Javascript framework that creates components that make up a webpage. It allows structure and style and logic to be more closely integrated than when they're divided into html and css and javascript. It allows the creation of easily portable widgets. It manages re-rendering components in response to changes of state for you, so you don't have to worry about the page getting out of sync with the javascript variables.
+
 1. Describe component state.
+
+Component state is all of the variables local to a component, which are created with useState.
 
 1. Describe props.
 
+Props are the values passed into a component using JSX attributes.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+Side effects are when a function changes anything other than its own local variables, and usually it is important not to perform things with side-effects every time a component re-renders. So we use useEffect, which with an empty dependency array only runs once the first time the component renders, and with a non-empty dependency array will additionally run whenever the variables in its dependency array are changed.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
